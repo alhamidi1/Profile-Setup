@@ -1,0 +1,55 @@
+/*
+  CSS File Path: /Users/abdullah/Desktop/Test/src/resources/css/DietType.css
+*/
+
+.content-pane {
+    -fx-max-width: 650px;
+}
+
+/* Default style for each clickable diet row */
+.diet-option-box {
+    -fx-padding: 14px; /* Padding is 14px to prepare for the border */
+    -fx-border-color: #E0E0E0; /* A light grey border to show the box */
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-background-color: white;
+    -fx-spacing: 15px;
+    -fx-alignment: center-left;
+}
+
+/* This style is ADDED by the controller on click */
+.diet-option-box.selected {
+    -fx-border-color: #4285F4; /* The blue highlight border */
+    -fx-border-width: 2px; /* A thicker border when selected */
+    -fx-background-color: #F6F9FF; /* The light blue background */
+    -fx-padding: 13px; /* Adjust padding to keep content aligned due to thicker border */
+}
+
+/* Styles for the text within each option (no change) */
+.diet-name-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212121;
+}
+
+.diet-excludes-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #616161;
+}
+
+/* Style for the note at the bottom of the page (no change) */
+.bottom-note-label {
+    -fx-padding: 20px 0 0 0;
+    -fx-font-size: 14px;
+    -fx-text-fill: #616161;
+}
+
+.diet-list-separator {
+    -fx-padding: 5px 0; /* Add some space around separators */
+}
+
+.diet-list-separator .line {
+     -fx-border-color: #EEEEEE;
+     -fx-border-width: 1px;
+}

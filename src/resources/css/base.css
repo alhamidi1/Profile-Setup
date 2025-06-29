@@ -1,0 +1,122 @@
+/*
+  CSS File Path: /Users/abdullah/Desktop/Test/src/resources/css/base.css
+  This file contains common styles for the entire application.
+*/
+
+/* --- Global Styles --- */
+.root {
+    -fx-font-family: "System";
+    -fx-background-color: #FFFFFF;
+}
+
+/* --- Header Section --- */
+.header-pane {
+    -fx-padding: 10px 40px;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-background-color: white;
+}
+
+.logo {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F4511E;
+}
+
+.user-info-box {
+    -fx-spacing: 12px;
+}
+
+.avatar-circle-green {
+    -fx-fill: #66BB6A; /* A shade of green */
+}
+
+.avatar-initials {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.user-info-box .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+
+/* --- Common Content Headings --- */
+.main-content-heading {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212121;
+    -fx-padding: 0 0 10px 0;
+}
+
+.main-content-subheading {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+    -fx-line-spacing: 4px;
+}
+
+/* --- Footer Section --- */
+.progress-bar-container {
+    -fx-padding: 0;
+    -fx-spacing: 3px;
+    -fx-background-color: #F5F5F5;
+}
+
+.progress-segment, .progress-segment-filled {
+    -fx-pref-height: 6px;
+    -fx-background-radius: 3px;
+}
+
+.progress-segment {
+    -fx-background-color: #E0E0E0;
+}
+
+.progress-segment-filled {
+    -fx-background-color: #F4511E;
+}
+
+.footer-pane {
+    -fx-padding: 15px 40px;
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.back-button, .continue-button {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 8px;
+}
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555555;
+}
+
+.back-button:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.back-arrow {
+    -fx-font-size: 16px;
+    -fx-fill: #555555;
+}
+
+.continue-button {
+    -fx-background-color: #FF7043;
+    -fx-text-fill: white;
+}
+
+.continue-button:hover {
+    -fx-background-color: #F4511E;
+}
+
+.continue-arrow {
+    -fx-font-size: 16px;
+    -fx-fill: white;
+}

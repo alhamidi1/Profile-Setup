@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane prefHeight="800.0" prefWidth="1280.0" styleClass="root" stylesheets="@../css/base.css, @../css/FoodAvoidance.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FoodAvoidanceController">
+   <top>
+      <HBox alignment="CENTER_LEFT" styleClass="header-pane">
+         <children>
+            <Label styleClass="logo" text="eat this much" />
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" styleClass="user-info-box">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Circle radius="18.0" styleClass="avatar-circle-green" />
+                        <Label styleClass="avatar-initials" text="A-" />
+                     </children>
+                  </StackPane>
+                  <Label fx:id="userIdLabel" text="24523229" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox alignment="CENTER" spacing="20.0">
+         <padding>
+            <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+         </padding>
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/placeholder_orange.png" />
+               </image>
+            </ImageView>
+            <VBox maxWidth="600.0" styleClass="content-vbox" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="main-content-heading" text="Are there foods you avoid?" />
+                  <Label styleClass="main-content-subheading" text="This may be due to allergies or any other reason." wrapText="true" />
+                  <FlowPane fx:id="foodItemsPane" styleClass="food-avoid-pane">
+                     <children>
+                        <ToggleButton fx:id="dairyToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Dairy" />
+                        <ToggleButton fx:id="eggsToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Eggs" />
+                        <ToggleButton fx:id="fishToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Fish" />
+                        <ToggleButton fx:id="glutenToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Gluten" />
+                        <ToggleButton fx:id="peanutsToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Peanuts" />
+                        <ToggleButton fx:id="sesameToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Sesame" />
+                        <ToggleButton fx:id="shellfishToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Shellfish" />
+                        <ToggleButton fx:id="soyToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Soy" />
+                        <ToggleButton fx:id="treeNutsToggle" mnemonicParsing="false" styleClass="food-avoid-toggle" text="Tree Nuts" />
+                     </children>
+                  </FlowPane>
+                  <TextFlow styleClass="bottom-note-text-flow">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You can fully configure your " />
+                        <Text styleClass="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Exclusions" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" later, including setting custom exclusions." />
+                     </children>
+                  </TextFlow>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER" styleClass="progress-bar-container">
+               <children>
+                  <Region styleClass="progress-segment-filled" HBox.hgrow="ALWAYS" />
+                  <Region styleClass="progress-segment" HBox.hgrow="ALWAYS" />
+                  <Region styleClass="progress-segment" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" styleClass="footer-pane">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" styleClass="back-button" text="Back" onAction="#onBackClicked">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="back-arrow" text="&lt;" />
+                     </graphic>
+                  </Button>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="continueButton" mnemonicParsing="false" styleClass="continue-button" text="Continue" onAction="#onContinueClicked">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="continue-arrow" text="&gt;" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

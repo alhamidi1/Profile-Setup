@@ -1,0 +1,46 @@
+/*
+  CSS File Path: /Users/abdullah/Desktop/Test/src/resources/css/FoodAvoidance.css
+*/
+
+.content-vbox {
+    -fx-padding: 0 20px 0 60px; /* Add padding to account for side image */
+}
+
+/* This is the container for the toggle buttons, controlling spacing */
+.food-avoid-pane {
+    -fx-hgap: 10px; /* Horizontal gap between buttons */
+    -fx-vgap: 10px; /* Vertical gap between buttons */
+    -fx-padding: 20px 0;
+}
+
+/* This styles each individual food button */
+.food-avoid-toggle {
+    -fx-background-color: white;
+    -fx-border-color: #BDBDBD;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px; /* This makes the buttons pill-shaped */
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+}
+
+/* This style is AUTOMATICALLY applied by JavaFX when a ToggleButton is selected */
+.food-avoid-toggle:selected {
+    -fx-background-color: #E3F2FD; /* Light blue background */
+    -fx-border-color: #4285F4;
+    -fx-text-fill: #1A73E8; /* Darker blue text */
+    -fx-font-weight: bold;
+}
+
+/* Style for the note at the bottom of the page */
+.bottom-note-text-flow {
+    -fx-padding: 20px 0 0 0;
+    -fx-font-size: 14px;
+    -fx-text-fill: #616161;
+}
+
+.bottom-note-text-flow .text.bold {
+    -fx-font-weight: bold;
+    -fx-fill: #444444;
+}

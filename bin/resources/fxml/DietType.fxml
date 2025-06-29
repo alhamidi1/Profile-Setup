@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="800.0" prefWidth="1280.0" styleClass="root" stylesheets="@../css/base.css, @../css/DietType.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DietTypeController">
+   <top>
+      <HBox alignment="CENTER_LEFT" styleClass="header-pane">
+         <children>
+            <Label styleClass="logo" text="eat this much" />
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" styleClass="user-info-box">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Circle radius="18.0" styleClass="avatar-circle-green" />
+                        <Label styleClass="avatar-initials" text="A-" />
+                     </children>
+                  </StackPane>
+                  <Label fx:id="userIdLabel" text="24523229" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <StackPane>
+         <children>
+            <ImageView fitHeight="197.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true" translateX="-18.0" translateY="-59.0" StackPane.alignment="CENTER_LEFT">
+               <image>
+                  <Image url="@../images/placeholder_bread.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets left="100.0" top="150.0" />
+               </StackPane.margin>
+            </ImageView>
+            <VBox alignment="TOP_CENTER" prefHeight="474.0" prefWidth="1280.0" StackPane.alignment="CENTER">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="697.0" prefHeight="487.0" prefWidth="697.0" styleClass="content-pane" translateX="34.0" translateY="126.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label styleClass="main-content-heading" text="What do you like to eat?" VBox.vgrow="NEVER" />
+                        <Label styleClass="main-content-subheading" text="Choose from a primary diet type. You can exclude specific foods in the next step." wrapText="true" />
+                        <VBox fx:id="dietOptionsContainer" spacing="10.0">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                           <children>
+                              <HBox fx:id="anythingOptionBox" prefHeight="85.0" prefWidth="650.0" styleClass="diet-option-box">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label styleClass="diet-name-label" text="Anything" />
+                                          <Label styleClass="diet-excludes-label" text="Excludes: Nothing" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="ketoOptionBox" prefHeight="85.0" prefWidth="650.0" styleClass="diet-option-box">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label styleClass="diet-name-label" text="Keto" />
+                                          <Label styleClass="diet-excludes-label" text="Excludes: High-carb Grains, Refined Starches, Sugar" wrapText="true" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="mediterraneanOptionBox" prefHeight="85.0" prefWidth="650.0" styleClass="diet-option-box">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label styleClass="diet-name-label" text="Mediterranean" />
+                                          <Label styleClass="diet-excludes-label" text="Excludes: Red Meat, Fruit juice, Processed Meats, Refined Starches, Sugar" wrapText="true" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              </children>
+                        </VBox>
+                        <Label styleClass="bottom-note-label" text="Don't see your preferred diet? Choose &quot;Anything&quot; and then customize it later." wrapText="true">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+       <VBox>
+         <children>
+            <HBox alignment="CENTER" styleClass="progress-bar-container">
+               <children>
+                  <Region styleClass="progress-segment-filled" HBox.hgrow="ALWAYS" />
+                  <Region styleClass="progress-segment" HBox.hgrow="ALWAYS" />
+                  <Region styleClass="progress-segment" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" styleClass="footer-pane">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" styleClass="back-button" text="Back" onAction="#onBackClicked">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="back-arrow" text="&lt;" />
+                     </graphic>
+                  </Button>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="continueButton" mnemonicParsing="false" styleClass="continue-button" text="Continue" onAction="#onContinueClicked">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="continue-arrow" text="&gt;" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

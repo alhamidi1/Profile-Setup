@@ -1,0 +1,113 @@
+/*
+  CSS File Path: /Users/abdullah/Desktop/Test/src/resources/css/ProfileSetup.css
+*/
+
+/* --- Global Styles --- */
+.root {
+    -fx-font-family: "System";
+    -fx-background-color: #FFFFFF;
+}
+
+/* --- Header Section --- */
+.header-pane {
+    -fx-padding: 10px 40px;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.logo {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F4511E; /* A shade of orange-red */
+}
+
+.user-info-box {
+    -fx-spacing: 12px;
+}
+
+/* Note: This is the blue avatar circle for this specific page */
+.avatar-circle {
+    -fx-fill: #42A5F5; /* A shade of blue */
+}
+
+.avatar-initials {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.user-info-box .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* --- Center Content Section --- */
+.main-content {
+    -fx-padding: 60px 20px;
+    -fx-spacing: 20px;
+    -fx-max-width: 800px;
+}
+
+.main-heading {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212121;
+}
+
+.sub-heading {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+    -fx-line-spacing: 4px;
+}
+
+.steps-container {
+    -fx-spacing: 25px;
+    -fx-padding: 40px 0 0 0;
+}
+
+.step-box {
+    -fx-alignment: center-left;
+    -fx-spacing: 25px;
+}
+
+.step-box VBox {
+    -fx-spacing: 5px;
+}
+
+.step-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212121;
+}
+
+.step-description {
+    -fx-font-size: 15px;
+    -fx-text-fill: #666666;
+}
+
+.separator .line {
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1px;
+}
+
+/* --- Footer Section (Specific to this page) --- */
+.footer-pane {
+    -fx-padding: 15px 40px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.get-started-button {
+    -fx-background-color: #FF7043; /* Lighter shade of orange-red */
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 28px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.get-started-button:hover {
+    -fx-background-color: #F4511E; /* Darker shade on hover */
+}

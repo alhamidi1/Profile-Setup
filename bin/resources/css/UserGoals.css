@@ -1,0 +1,70 @@
+/*
+  CSS File Path: /Users/abdullah/Desktop/Test/src/resources/css/UserGoals.css
+*/
+
+.content-vbox {
+    -fx-padding: 0 20px 0 40px; /* Add padding to account for side image */
+}
+
+/* --- Form GridPane Layout --- */
+.form-gridpane {
+    -fx-vgap: 20px; /* Vertical spacing between form rows */
+    -fx-padding: 20px 0 0 0;
+}
+.form-gridpane .label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #444;
+    -fx-padding: 8px 0 0 0; /* Align text vertically with inputs */
+}
+
+/* Style for the separators between rows */
+.form-gridpane .separator .line {
+    -fx-border-color: #EEEEEE;
+    -fx-border-width: 1px;
+}
+
+/* --- Segmented Toggle Button Group --- */
+.toggle-button-group .toggle-button {
+    -fx-background-color: white;
+    -fx-border-color: #BDBDBD;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-background-insets: 0;
+}
+/* Left button has rounded left corners */
+.toggle-button-group .toggle-button:first-child {
+    -fx-border-radius: 5px 0 0 5px;
+}
+/* Middle buttons have no rounded corners or side borders */
+.toggle-button-group .toggle-button:mid-child {
+     -fx-border-radius: 0;
+     -fx-border-width: 1px 0 1px 0;
+}
+/* Right button has rounded right corners */
+.toggle-button-group .toggle-button:last-child {
+    -fx-border-radius: 0 5px 5px 0;
+    -fx-border-width: 1px 1px 1px 0;
+}
+/* Style for the selected button */
+.toggle-button-group .toggle-button:selected {
+    -fx-background-color: #4285F4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* --- Info Icon (?) --- */
+.info-icon {
+    -fx-cursor: hand;
+}
+.info-icon-circle {
+    -fx-fill: transparent;
+    -fx-stroke: #9E9E9E;
+    -fx-stroke-width: 1.5px;
+}
+.info-icon-text {
+    -fx-fill: #9E9E9E;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}

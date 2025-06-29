@@ -1,0 +1,10 @@
+/*
+  CSS File Path: /Users/abdullah/Desktop/Test/src/resources/css/DietWelcome.css
+*/
+
+.main-content-subheading-secondary {
+    -fx-font-size: 16px;
+    -fx-text-fill: #777777;
+    -fx-line-spacing: 4px;
+    -fx-padding: 10px 0 0 0;
+}
