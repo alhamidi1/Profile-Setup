@@ -21,7 +21,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="800.0" prefWidth="1280.0" styleClass="root" stylesheets="@../css/base.css, @../css/UserDetails.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserDetailsController">
+<BorderPane prefHeight="800.0" prefWidth="1280.0" styleClass="root" stylesheets="@../css/base.css, @../css/UserDetails.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserDetailsController">
    <top>
       <HBox alignment="CENTER_LEFT" styleClass="header-pane">
          <children>
@@ -87,7 +87,7 @@
                       <Label text="Height" GridPane.rowIndex="2" />
                      <HBox alignment="CENTER_RIGHT" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                         <children>
-                           <TextField fx:id="heightField" alignment="CENTER_RIGHT" prefWidth="80.0" text="112" />
+                           <TextField fx:id="heightField" alignment="CENTER_RIGHT" prefWidth="80.0" />
                            <Label text="cm" />
                         </children>
                      </HBox>
@@ -95,7 +95,7 @@
                       <Label text="Weight" GridPane.rowIndex="4" />
                      <HBox alignment="CENTER_RIGHT" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                         <children>
-                           <TextField fx:id="weightField" alignment="CENTER_RIGHT" prefWidth="80.0" text="123" />
+                           <TextField fx:id="weightField" alignment="CENTER_RIGHT" prefWidth="80.0" />
                            <Label text="kg" />
                         </children>
                      </HBox>
@@ -103,7 +103,7 @@
                       <Label text="Age" GridPane.rowIndex="6" />
                      <HBox alignment="CENTER_RIGHT" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                         <children>
-                           <TextField fx:id="ageField" alignment="CENTER_RIGHT" prefWidth="80.0" text="32" />
+                           <TextField fx:id="ageField" alignment="CENTER_RIGHT" prefWidth="80.0" />
                            <Label text="years" />
                         </children>
                      </HBox>
@@ -133,6 +133,19 @@
                      <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="9" />
                       <Label text="Activity Level" GridPane.rowIndex="10" />
                      <ChoiceBox fx:id="activityLevelChoiceBox" prefWidth="250.0" styleClass="activity-choice-box" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
                   </GridPane>
                </children>
             </VBox>
@@ -151,13 +164,13 @@
             </HBox>
             <HBox alignment="CENTER" styleClass="footer-pane">
                <children>
-                  <Button fx:id="backButton" mnemonicParsing="false" styleClass="back-button" text="Back" onAction="#onBackClicked">
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackClicked" styleClass="back-button" text="Back">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="back-arrow" text="&lt;" />
                      </graphic>
                   </Button>
                   <Region HBox.hgrow="ALWAYS" />
-                  <Button fx:id="continueButton" mnemonicParsing="false" styleClass="continue-button" text="Continue" onAction="#onContinueClicked">
+                  <Button fx:id="continueButton" mnemonicParsing="false" onAction="#onContinueClicked" styleClass="continue-button" text="Continue">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="continue-arrow" text="&gt;" />
                      </graphic>
