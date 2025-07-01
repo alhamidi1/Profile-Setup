@@ -64,7 +64,7 @@ public class SceneNavigator {
 
             Scene scene = stage.getScene();
             if (scene == null) {
-                scene = new Scene(root, 1280, 800);
+                scene = new Scene(root, 1400, 1000);
                 stage.setScene(scene);
             } else {
                 stage.getScene().setRoot(root);

@@ -14,12 +14,13 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="800.0" prefWidth="1280.0" styleClass="root" stylesheets="@../css/base.css, @../css/UserGoals.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserGoalsController">
+<BorderPane prefHeight="800.0" prefWidth="1280.0" styleClass="root" stylesheets="@../css/base.css, @../css/UserGoals.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserGoalsController">
    <top>
        <HBox alignment="CENTER_LEFT" styleClass="header-pane">
          <children>
@@ -105,10 +106,13 @@
                                           </children>
                                        </HBox>
                                     </children>
+                                    <rowConstraints>
+                                       <RowConstraints />
+                                    </rowConstraints>
                                  </GridPane>
                               </children>
                            </VBox>
-                           <VBox fx:id="exactGoalPane" spacing="20.0" visible="false" managed="false">
+                           <VBox fx:id="exactGoalPane" managed="false" spacing="20.0" visible="false">
                               <children>
                                  <GridPane styleClass="form-gridpane">
                                     <columnConstraints>
@@ -120,23 +124,33 @@
                                         <HBox alignment="CENTER_RIGHT" spacing="8.0" GridPane.columnIndex="1">
                                             <children>
                                                 <TextField fx:id="weightGoalField" alignment="CENTER_RIGHT" prefWidth="80.0" />
-                                                <Label text="lbs" />
+                                                <Label text="kg" />
                                             </children>
                                         </HBox>
                                         <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
-                                        <Label text="Target weight change" GridPane.rowIndex="2"/>
+                                        <Label text="Target weight change" GridPane.rowIndex="2" />
                                         <HBox alignment="CENTER_RIGHT" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                             <children>
                                                 <TextField fx:id="weightChangeField" alignment="CENTER_RIGHT" prefWidth="80.0" />
-                                                <Label text="lbs a week" />
+                                                <Label text="kg a week" />
                                             </children>
                                         </HBox>
                                     </children>
+                                    <rowConstraints>
+                                       <RowConstraints />
+                                       <RowConstraints />
+                                       <RowConstraints />
+                                    </rowConstraints>
                                  </GridPane>
                               </children>
                            </VBox>
                         </children>
                      </StackPane>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
                   </GridPane>
                </children>
             </VBox>
@@ -155,13 +169,13 @@
             </HBox>
             <HBox alignment="CENTER" styleClass="footer-pane">
                <children>
-                  <Button fx:id="backButton" mnemonicParsing="false" styleClass="back-button" text="Back" onAction="#onBackClicked">
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackClicked" styleClass="back-button" text="Back">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="back-arrow" text="&lt;" />
                      </graphic>
                   </Button>
                   <Region HBox.hgrow="ALWAYS" />
-                  <Button fx:id="continueButton" mnemonicParsing="false" styleClass="continue-button" text="Continue" onAction="#onContinueClicked">
+                  <Button fx:id="continueButton" mnemonicParsing="false" onAction="#onContinueClicked" styleClass="continue-button" text="Continue">
                      <graphic>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="continue-arrow" text="&gt;" />
                      </graphic>
